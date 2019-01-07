@@ -1,12 +1,20 @@
-interface Person {
-    firstName: string;
-    lastName: string;
+import axios, {
+    AxiosResponse,
+    AxiosError,
+} from "../../node_modules/axios/index";
+
+interface IPrastiseNew {
+    id : number;
+    name:string;
+    age:number;
+    dateTime:string;
 }
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
+let buttonElement : HTMLButtonElement = <HTMLButtonElement> document.getElementById("getAll");
+buttonElement.addEventListener("click",Displaytable);
+function Displaytable():void{
+    let url : string = ""
 }
-let user: Person = { firstName: "John", lastName: "Doe" };
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+
+
